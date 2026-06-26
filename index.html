@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Zero-Experience Garage | Resource Command Center</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom accent color overriding for the automotive aesthetic */
+        .accent-orange { color: #FF5722; }
+        .bg-orange { background-color: #FF5722; }
+        .border-orange { border-color: #FF5722; }
+        .hover-bg-orange:hover { background-color: #E64A19; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen selection:bg-orange-500 selection:text-white">
+
+    <header class="border-b border-slate-800 bg-slate-950/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-orange p-2.5 rounded-lg text-white shadow-lg shadow-orange-500/20">
+                    <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-black tracking-wider uppercase">The Zero-Experience Garage</h1>
+                    <p class="text-xs text-slate-400 font-medium">100-Day Masterclass Command Center</p>
+                </div>
+            </div>
+            
+            <div class="relative w-full sm:w-72 lg:w-96">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-500">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" id="searchInput" onkeyup="filterTools()" placeholder="Search tools or functions..." 
+                    class="w-full pl-10 pr-4 py-2 bg-slate-900 border border-slate-700 rounded-lg text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all">
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        
+        <section class="mb-12 bg-gradient-to-br from-slate-950 to-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-800 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 text-slate-800/20 pointer-events-none hidden lg:block">
+                <i class="fa-solid fa-gauge-high text-9xl"></i>
+            </div>
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-500 bg-orange-500/10 px-2.5 py-1 rounded-full border border-orange-500/20">System Active</span>
+                <h2 class="text-3xl font-black tracking-tight text-white mt-3 mb-4 sm:text-4xl">Master Resource Link Directory</h2>
+                <p class="text-slate-400 leading-relaxed text-sm sm:text-base">
+                    Welcome to your centralized online matrix. This dashboard synthesizes the tools, platform paths, hardware stores, and production assets assigned across the 100-Day Creator Blueprint. Use the modules below to deploy your digital infrastructure.
+                </p>
+            </div>
+        </section>
+
+        <div id="directoryGrid" class="space-y-12">
+
+            <div class="module-section">
+                <div class="flex items-center gap-2 mb-6 border-b border-slate-800 pb-2">
+                    <span class="text-orange text-lg font-bold">01.</span>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-white">Digital Identity & Security</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Google Account Portal</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Infrastructure</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Builds a separate, pristine corporate email backbone for channel assets and inquiries.</p>
+                        </div>
+                        <a href="https://accounts.google.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Visit Portal <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">1Password / Bitwarden</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Security</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Secures and encrypts master account login credentials via decentralized password vaults.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://1password.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">1Password</a>
+                            <a href="https://bitwarden.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Bitwarden</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Google Authenticator</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Security</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Establishes application-based token verification protocols to eliminate SMS vulnerabilities.</p>
+                        </div>
+                        <a href="https://safety.google/authentication/" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Configure 2FA <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">YouTube Channel Switcher</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Platform</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Primary route to switch architectures and initialize high-scalability Brand Accounts.</p>
+                        </div>
+                        <a href="https://www.youtube.com/channel_switcher" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Deploy Brand Channel <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Social Footprint Lock</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Handles</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Secures core cross-promotional handles on Instagram and TikTok to maintain naming continuity.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://www.instagram.com" target="_blank" class="inline-flex items-center justify-center gap-1 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors"><i class="fa-brands fa-instagram text-xs"></i> IG</a>
+                            <a href="https://www.tiktok.com" target="_blank" class="inline-flex items-center justify-center gap-1 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors"><i class="fa-brands fa-tiktok text-xs"></i> TikTok</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-section">
+                <div class="flex items-center gap-2 mb-6 border-b border-slate-800 pb-2">
+                    <span class="text-orange text-lg font-bold">02.</span>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-white">Hardware, Audio & Studio Staging</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Rode / DJI Audio Repositories</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Audio Hardware</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Hardware exploration links for wireless lavalier clip systems to neutralize workspace echo.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://rode.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Rode Gear</a>
+                            <a href="https://www.dji.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">DJI Mic</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">B&H Photo Video / Joby</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Rigging Gear</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Source options for heavy fluid-head tripods, phone cages, and adaptive dynamic magnetic clamps.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://www.bhphotovideo.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">B&H Catalog</a>
+                            <a href="https://joby.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Joby Mounts</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Home Depot Utility Lighting</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Staging</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Acquisition portal for daylight-balanced (5500K) illumination arrays to avoid sensor grain.</p>
+                        </div>
+                        <a href="https://www.homedepot.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Sourced Shop Lights <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Pinterest Workshop Moodboards</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Set Design</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Visual asset directories to plan pegboard placement, workbench setups, and depth layout styles.</p>
+                        </div>
+                        <a href="https://www.pinterest.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Browse Blueprints <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Official DMV Logistics Finder</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Vehicle Legal</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Reference framework to execute vehicle acquisition titles, bill of sale processing, and transit permissions.</p>
+                        </div>
+                        <a href="https://www.dmv.org" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Access Legal Registry <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-section">
+                <div class="flex items-center gap-2 mb-6 border-b border-slate-800 pb-2">
+                    <span class="text-orange text-lg font-bold">03.</span>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-white">Pre-Production & Scripting Format</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Creator Science Academy</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Narrative Study</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Educational engine tracking psychological retention drops, hook logic, and pacing formatting.</p>
+                        </div>
+                        <a href="https://www.creatorscience.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Study Pacing Guides <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Figma Canvas Tools</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Prototyping</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Vector spatial layout workspace to prototype composite visual framing layers prior to shooting.</p>
+                        </div>
+                        <a href="https://www.figma.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Open Wireframes <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Thieve Thumbnail Library</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Analysis</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Benchmarking reference library containing high-performance high-CTR thumbnails across niches.</p>
+                        </div>
+                        <a href="https://thieve.co" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Review Graphics <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-section">
+                <div class="flex items-center gap-2 mb-6 border-b border-slate-800 pb-2">
+                    <span class="text-orange text-lg font-bold">04.</span>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-white">Video Editors, Sound & Graphic Assets</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Canva Graphics Suite</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Asset Studio</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Rapid layout creation center for mobile avatars and responsive channel art backgrounds.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://www.canva.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Canva Engine</a>
+                            <a href="https://www.canva.com/create/youtube-banners/" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Banner Canvas</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">CapCut Engine ecosystem</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Timeline NLE</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Fast timeline editing system equipped with multi-layer track splitting and AI auto-captioning.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://www.capcut.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Get Software</a>
+                            <a href="https://www.capcut.com/resource" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Hotkey Guides</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">DaVinci Resolve Studio</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">NLE Studio</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Hollywood-grade high-fidelity workspace tracking color isolation, balancing mixers, and sound design layers.</p>
+                        </div>
+                        <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Download Pro NLE <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Freesound Audio Registry</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">SFX</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Open-source sample platform used to secure mechanical spot cues (socket resets, impact guns).</p>
+                        </div>
+                        <a href="https://freesound.org" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Fetch Sound Effects <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Premium Audio Blocks</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Tracks</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Subscription and cleared soundtrack pathways providing background audio without copyright risk.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://www.epidemicsound.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Epidemic</a>
+                            <a href="https://artlist.io" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Artlist</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Flaticon Vector System</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Overlays</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Extensive overlay design catalog providing technical asset layers, wrench glyphs, and layout charts.</p>
+                        </div>
+                        <a href="https://www.flaticon.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Download Vectors <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-section">
+                <div class="flex items-center gap-2 mb-6 border-b border-slate-800 pb-2">
+                    <span class="text-orange text-lg font-bold">05.</span>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-white">Distribution & Algorithmic Optimization</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">YouTube Backend Matrix</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Control Center</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Primary command center to track audience curves, map metadata boxes, and review comments.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://studio.youtube.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Studio Core</a>
+                            <a href="https://www.youtube.com/upload" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Upload Portal</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Ahrefs Optimization Planner</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">SEO Keyword</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Sufaces accurate search parameters, monthly tag volume, and competitor keyword densities.</p>
+                        </div>
+                        <a href="https://ahrefs.com/youtube-keyword-tool" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Analyze Metadata <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">VidIQ / TubeBuddy Extensions</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">VSEO Tools</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Inline browser integrations providing algorithmic data, check scores, and structural optimization tags.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://vidiq.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">VidIQ API</a>
+                            <a href="https://www.tubebuddy.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">TubeBuddy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-section">
+                <div class="flex items-center gap-2 mb-6 border-b border-slate-800 pb-2">
+                    <span class="text-orange text-lg font-bold">06.</span>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-white">Project Management & Enterprise Sustainability</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Trello / Asana Organizers</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Productivity</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Task matrices tracking multi-project production stages, file buffers, and content backlogs.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://trello.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Trello Board</a>
+                            <a href="https://asana.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Asana Flow</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Miro Dynamic Mapping</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Planning</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Infinite whiteboard grid to map out garage seasons, mechanical diagnostics flowcharts, and car outlines.</p>
+                        </div>
+                        <a href="https://miro.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Open Work Canvas <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Google AdSense Dashboard</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Monetization</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">The core structural payout portal used to manage monetization earnings and legal tax parameters.</p>
+                        </div>
+                        <a href="https://www.google.com/adsense" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors font-semibold">Verify AdSense Payouts <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Canva Media Kit Maker</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Pitch Deck</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Direct design path configured to output single-sheet demographic summaries for brand outreach.</p>
+                        </div>
+                        <a href="https://www.canva.com/media-kits/templates/" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Build Media Sheet <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Commercial Creator Affiliate Bridges</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Sponsorships</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Global partner networks connecting emerging automotive channels with tool brands and aftermarket retailers.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="https://impact.com" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">Impact Engine</a>
+                            <a href="https://company.shopltk.com/creator" target="_blank" class="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-bold py-2 rounded-lg border border-slate-800 transition-colors">LTK Network</a>
+                        </div>
+                    </div>
+                    <div class="card bg-slate-950 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-100 text-sm tracking-wide">Discord Server Hub</h4>
+                                <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Community</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Platform architecture path utilized to manage core community groups off-platform away from basic feeds.</p>
+                        </div>
+                        <a href="https://discord.com" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white text-xs font-bold py-2 px-4 rounded-lg border border-slate-800 transition-colors">Initialize Community Hub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="noResults" class="hidden text-center py-12 bg-slate-950 border border-slate-800 rounded-xl mt-6">
+            <i class="fa-solid fa-triangle-exclamation text-slate-600 text-3xl mb-3"></i>
+            <p class="text-sm text-slate-400">No matching tools found. Check your syntax spelling.</p>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950 mt-24 py-6 text-center text-xs text-slate-500">
+        <p>&copy; The Zero-Experience Garage Directory. Built for production-ready deployment.</p>
+    </footer>
+
+    <script>
+        function filterTools() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const cards = document.getElementsByClassName('card');
+            const modules = document.getElementsByClassName('module-section');
+            let overallMatches = 0;
+
+            // Evaluate item matches within cards
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].querySelector('h4').innerText.toLowerCase();
+                const text = cards[i].querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(filter) || text.includes(filter)) {
+                    cards[i].style.display = "";
+                    overallMatches++;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            // Hide/Show complete module block depending on contents matching
+            for (let j = 0; j < modules.length; j++) {
+                const visibleCardsInModule = modules[j].querySelectorAll('.card[style=""]');
+                const matchingCards = modules[j].querySelectorAll('.card:not([style="display: none;"])');
+                
+                if (matchingCards.length > 0) {
+                    modules[j].style.display = "";
+                } else {
+                    modules[j].style.display = "none";
+                }
+            }
+
+            // Show empty search fallback state notice if nothing matches strings
+            const noResults = document.getElementById('noResults');
+            if (overallMatches === 0) {
+                noResults.style.display = "block";
+            } else {
+                noResults.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
